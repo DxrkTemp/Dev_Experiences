@@ -14,7 +14,7 @@ if (!data.data || data.data.length === 0) {
 }
 
 const game = data.data[0];
-ccuElement.textContent = `${game.playing} / ${game.maxPlayers} players online`;
+ccuElement.textContent = `Playing: ${game.playing} / ${game.maxPlayers}`;
 
 } catch (err) {
 console.error(err);
@@ -25,3 +25,4 @@ ccuElement.textContent = "Error fetching CCU";
 refreshBtn.addEventListener("click", fetchCCU);
 
 fetchCCU();
+
